@@ -699,7 +699,7 @@ export default function App() {
                           <img
                             src={project.images[0]}
                             alt={project.title}
-                            className="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                            className="h-52 w-full object-contain bg-black p-2 transition duration-500 group-hover:scale-[1.03]"
                           />
                         </div>
                       ) : null}
@@ -895,7 +895,7 @@ export default function App() {
                       <img
                         src={selectedProject.images[currentImageIndex]}
                         alt={`${selectedProject.title} preview ${currentImageIndex + 1}`}
-                        className="h-[320px] w-full object-cover sm:h-[380px] lg:h-full"
+                        className="h-[320px] w-full object-contain bg-black p-2 sm:h-[380px] lg:h-full"
                       />
                       {selectedProject.images.length > 1 && (
                         <>
