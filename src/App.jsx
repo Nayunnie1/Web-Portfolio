@@ -87,6 +87,7 @@ const projects = [
       "Ensuring the tile-reveal behavior felt correct and predictable while keeping the gameplay responsive.",
     tech: ["Python", "Tkinter"],
     images: ["/minesweeper1.png", "/minesweeper2.png", "/minesweeper3.png"],
+    github: "https://github.com/Nayunnie1/Minesweeper",
     accent: "from-amber-400/20 via-yellow-300/10 to-transparent",
   },
   {
@@ -105,6 +106,7 @@ const projects = [
       "Getting merge behavior and directional updates to work consistently across all move states.",
     tech: ["Python"],
     images: ["/2048-1.png", "/2048-2.png", "/2048-3.png", "/2048-4.png"],
+    github: "https://github.com/Nayunnie1/2048",
     accent: "from-indigo-400/20 via-blue-300/10 to-transparent",
   },
   {
@@ -123,6 +125,7 @@ const projects = [
       "Keeping the gameplay logic reliable as multiple moving parts changed at the same time.",
     tech: ["Python", "Pygame"],
     images: ["/tetris1.png", "/tetris2.png", "/tetris3.png"],
+    github: "https://github.com/Nayunnie1/tetris_py",
     accent: "from-fuchsia-400/20 via-pink-300/10 to-transparent",
   },
   {
@@ -141,6 +144,7 @@ const projects = [
       "Designing the project in a way that stayed simple while still showing clear separation of concerns.",
     tech: ["Python", "Pygame", "OOP"],
     images: ["/snake1.png", "/snake2.png", "/snake3.png"],
+    github: "https://github.com/Nayunnie1/snake-gui-game",
     accent: "from-cyan-400/20 via-sky-300/10 to-transparent",
   },
   {
@@ -159,6 +163,7 @@ const projects = [
       "Keeping the logic clean while making the interface easy to follow for repeated play.",
     tech: ["Python", "Tkinter"],
     images: ["/tictactoe1.png", "/tictactoe2.png", "/tictactoe3.png"],
+    github: "https://github.com/Nayunnie1/tictactoe",
     accent: "from-violet-400/20 via-purple-300/10 to-transparent",
   },
 ];
@@ -978,6 +983,20 @@ export default function App() {
                       ))}
                     </div>
                   </div>
+
+                  {selectedProject.github && (
+                    <div className="mt-5">
+                      <a
+                        href={selectedProject.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        View Source Code
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
